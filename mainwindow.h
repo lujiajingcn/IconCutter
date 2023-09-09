@@ -39,6 +39,10 @@ private slots:
 
     void on_actionSave_triggered();
 
+    void on_horizontalSlider_valueChanged(int value);
+
+    void on_leStepNum_textChanged(const QString &arg1);
+
 private:
     QString getFile();
     void showIconPic();

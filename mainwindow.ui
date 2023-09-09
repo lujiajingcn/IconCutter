@@ -6,17 +6,17 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>692</width>
-    <height>521</height>
+    <width>835</width>
+    <height>520</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QGridLayout" name="gridLayout_4">
+   <layout class="QGridLayout" name="gridLayout_10">
     <item row="0" column="0">
-     <layout class="QGridLayout" name="gridLayout_2">
+     <layout class="QGridLayout" name="gridLayout_2" columnstretch="1,2,1,2,5">
       <item row="0" column="0">
        <widget class="QLabel" name="label_2">
         <property name="text">
@@ -27,7 +27,7 @@
       <item row="0" column="1">
        <widget class="QLineEdit" name="leRowCount">
         <property name="text">
-         <string>42</string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -41,7 +41,7 @@
       <item row="0" column="3">
        <widget class="QLineEdit" name="leColumnCount">
         <property name="text">
-         <string>12</string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -61,80 +61,7 @@
      </layout>
     </item>
     <item row="1" column="0">
-     <layout class="QGridLayout" name="gridLayout_3">
-      <item row="0" column="1">
-       <layout class="QGridLayout" name="gridLayout">
-        <item row="1" column="0">
-         <widget class="QPushButton" name="btnLTMoveRight">
-          <property name="text">
-           <string>左上顶点右移</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="0">
-         <widget class="QPushButton" name="btnLTMoveDown">
-          <property name="text">
-           <string>左上顶点下移</string>
-          </property>
-         </widget>
-        </item>
-        <item row="6" column="0">
-         <widget class="QPushButton" name="btnRBMoveUp">
-          <property name="text">
-           <string>右下顶点上移</string>
-          </property>
-         </widget>
-        </item>
-        <item row="5" column="0">
-         <widget class="QPushButton" name="btnRBMoveRight">
-          <property name="text">
-           <string>右下顶点右移</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="0">
-         <widget class="QPushButton" name="btnLTMoveLeft">
-          <property name="text">
-           <string>左上顶点左移</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="0">
-         <widget class="QPushButton" name="btnRBMoveLeft">
-          <property name="text">
-           <string>右下顶点左移</string>
-          </property>
-         </widget>
-        </item>
-        <item row="8" column="0">
-         <spacer name="verticalSpacer">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="2" column="0">
-         <widget class="QPushButton" name="btnLTMoveUp">
-          <property name="text">
-           <string>左上顶点上移</string>
-          </property>
-         </widget>
-        </item>
-        <item row="7" column="0">
-         <widget class="QPushButton" name="btnRBMoveDown">
-          <property name="text">
-           <string>右下顶点下移</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
+     <layout class="QGridLayout" name="gridLayout_9" columnstretch="5,1">
       <item row="0" column="0">
        <widget class="QScrollArea" name="scrollArea">
         <property name="widgetResizable">
@@ -145,8 +72,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>558</width>
-           <height>389</height>
+           <width>553</width>
+           <height>388</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout">
@@ -161,6 +88,159 @@
         </widget>
        </widget>
       </item>
+      <item row="0" column="1">
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout_3" columnstretch="1,2,1" columnminimumwidth="0,0,0">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>移动像素数：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QSlider" name="horizontalSlider">
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>9</number>
+            </property>
+            <property name="pageStep">
+             <number>3</number>
+            </property>
+            <property name="value">
+             <number>3</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLineEdit" name="leStepNum">
+            <property name="text">
+             <string>3</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <layout class="QGridLayout" name="gridLayout_7">
+          <item row="0" column="0">
+           <layout class="QGridLayout" name="gridLayout_5">
+            <item row="0" column="0">
+             <widget class="QGroupBox" name="groupBox">
+              <property name="title">
+               <string>左上顶点</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout">
+               <item row="0" column="0">
+                <widget class="QPushButton" name="btnLTMoveLeft">
+                 <property name="text">
+                  <string>左移</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QPushButton" name="btnLTMoveRight">
+                 <property name="text">
+                  <string>右移</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QPushButton" name="btnLTMoveUp">
+                 <property name="text">
+                  <string>上移</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QPushButton" name="btnLTMoveDown">
+                 <property name="text">
+                  <string>下移</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="1">
+           <layout class="QGridLayout" name="gridLayout_6">
+            <item row="0" column="0">
+             <spacer name="verticalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="1" column="0">
+             <widget class="QGroupBox" name="groupBox_2">
+              <property name="title">
+               <string>右下顶点</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_4">
+               <item row="0" column="0">
+                <widget class="QPushButton" name="btnRBMoveLeft">
+                 <property name="text">
+                  <string>左移</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QPushButton" name="btnRBMoveRight">
+                 <property name="text">
+                  <string>右移</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QPushButton" name="btnRBMoveUp">
+                 <property name="text">
+                  <string>上移</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QPushButton" name="btnRBMoveDown">
+                 <property name="text">
+                  <string>下移</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
      </layout>
     </item>
    </layout>
@@ -170,7 +250,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>692</width>
+     <width>835</width>
      <height>26</height>
     </rect>
    </property>

@@ -1,12 +1,12 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QHBoxLayout>
-#include <QVBoxLayout>
 #include <QLabel>
 #include <QPainter>
 #include <QDebug>
 #include <QFileDialog>
 #include <QMessageBox>
+#include <QRegExp>
+#include <QRegExpValidator>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -22,7 +22,11 @@ MainWindow::MainWindow(QWidget *parent) :
     m_nIconWidth = 0;
     m_nIconHeight = 0;
 
-    m_nStep = 1;
+    m_nStep = 3;
+
+    QRegExp reg("^[1-9]$");
+    QValidator *vld = new QRegExpValidator(reg);
+    ui->leStepNum->setValidator(vld);
 
     setWindowState(Qt::WindowMaximized);
 }
@@ -179,4 +183,16 @@ void MainWindow::on_actionSave_triggered()
     m_pixmap.load(m_sIconFilePath);
     QPixmap pixmap = m_pixmap.copy(m_ptLeftTop.x(), m_ptLeftTop.y(), m_ptRightBottom.x() - m_ptLeftTop.x(), m_ptRightBottom.y() - m_ptLeftTop.y());
     pixmap.save(sFilePath);
+}
+
+void MainWindow::on_horizontalSlider_valueChanged(int value)
+{
+    ui->leStepNum->setText(QString::number(value));
+    m_nStep = value;
+}
+
+void MainWindow::on_leStepNum_textChanged(const QString &arg1)
+{
+    ui->horizontalSlider->setValue(arg1.toInt());
+    m_nStep = arg1.toInt();
 }
